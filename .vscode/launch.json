@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run CrashShield X Backend (FastAPI)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/run.py",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      },
+      "cwd": "${workspaceFolder}/backend"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Run Full System (Backend + Frontend)",
+      "configurations": ["Run CrashShield X Backend (FastAPI)"],
+      "preLaunchTask": "Start Frontend (Vite)"
+    }
+  ]
+}
